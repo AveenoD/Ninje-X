@@ -1,0 +1,22 @@
+/* Pricing placeholder */
+.nx-pricing-wrap {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #2d3748 0%, #1f2937 100%);
+  padding: 24px 16px;
+}
+.nx-pricing-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  padding: 28px 24px;
+  text-align: center;
+}
+.nx-pricing-card h1 { margin: 0 0 8px 0; font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; }
+.nx-pricing-card p { margin: 0; color: #facc15; font-weight: 800; }
+
+

@@ -1,0 +1,194 @@
+.main {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(20px, 3vw, 60px) 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.main-containt {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    width: 90%;
+    max-width: 800px;
+    padding: 0 2vw;
+    margin-top: clamp(36px, 10vh, 100px);
+    gap: clamp(18px, 3vw, 42px);
+    box-sizing: border-box;
+}
+
+.main-containt h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 900;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 0.5em;
+    width: 100%;
+    margin-top: 0;
+}
+
+.main-containt p {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.m-btn {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin: clamp(16px, 2vw, 32px) auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 2vw, 24px);
+    flex-wrap: wrap;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+.m-btn button {
+    color: #fff;
+    background: transparent;
+    padding: clamp(0.6rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    border: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.m-btn button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: clamp(44px, 10vw, 100px) auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(6px, 2vw, 16px);
+}
+
+@media (max-width: 480px) {
+    .main-containt {
+        gap: 16px;
+        margin-top: 40px;
+        padding: 0 5vw;
+    }
+    .main-containt h1 {
+        font-size: 1.8rem;
+        white-space: normal; /* Allow wrapping on mobile */
+        margin-bottom: 14px;
+    }
+    .main-containt p {
+        font-size: 0.95rem;
+    }
+    .m-btn {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 4vw;
+        align-items: stretch;
+    }
+    .m-btn button {
+        width: 100%;
+    }
+    .circle {
+        width: 60vw;
+        height: 60vw;
+        min-width: 80px;
+        min-height: 80px;
+        max-width: 200px;
+        max-height: 200px;
+        padding: 8px;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .main-containt {
+        gap: 24px;
+    }
+    .main-containt h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    .main-containt p {
+        font-size: 1rem;
+    }
+    .m-btn {
+        gap: 16px;
+        padding: 0 3vw;
+    }
+    .circle {
+        width: 25vw;
+        height: 25vw;
+        min-width: 90px;
+        min-height: 90px;
+        max-width: 150px;
+        max-height: 150px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-containt h1 {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+    }
+    .main-containt p {
+        font-size: 0.95rem;
+    }
+    .m-btn {
+        gap: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+    .main {
+        height: 30vw;
+        min-height: 350px;
+    }
+    .main-containt {
+        gap: 44px;
+        margin-top: 7vw;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .main-containt h1 {
+        width: 100%;
+        font-size: 4rem;
+        margin-bottom: 36px;
+        white-space: nowrap;
+    }
+    .main-containt p {
+        font-size: 1.02rem;
+        margin-bottom: 0;
+    }
+    .m-btn {
+        gap: 2vw;
+        padding: 0;
+        align-items: center;
+    }
+    .circle {
+        gap: 16px;
+        margin-top: 70px;
+        min-width: 120px;
+        min-height: 120px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+}

@@ -1,0 +1,123 @@
+.footer {
+      width: 100%;
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      padding: clamp(1rem, 3vw, 2rem);
+      min-height: auto;
+    }
+
+    .media {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: clamp(1rem, 2vw, 2rem);
+      padding: clamp(1rem, 2vw, 2.5rem) 0;
+      width: 100%;
+    }
+
+    .media img {
+      width: clamp(80px, 15vw, 150px);
+      height: auto;
+      object-fit: contain;
+    }
+
+    .link {
+      display: flex;
+      gap: clamp(0.5rem, 1vw, 1.5rem);
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .link svg {
+      width: clamp(24px, 5vw, 40px);
+      height: clamp(24px, 5vw, 40px);
+      transition: transform 0.3s ease;
+    }
+
+    .link svg:hover {
+      transform: scale(1.1);
+    }
+
+    .media h5 {
+      color: #fc0000;
+      letter-spacing: clamp(1px, 0.5vw, 2px);
+      text-align: center;
+      font-size: clamp(0.65rem, 1.5vw, 0.875rem);
+      font-weight: 500;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    .media span {
+      color: #ffffff;
+    }
+
+    .last-foot {
+      width: 100%;
+      border-top: 2px solid white;
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .last-foot h4 {
+      color: #fff;
+      font-weight: 400;
+      font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    /* Tablet (640px and up) */
+    @media (min-width: 640px) {
+      .footer {
+        padding: clamp(1.5rem, 3vw, 2.5rem);
+      }
+
+      .media {
+        gap: 1.5vw;
+      }
+
+      .link {
+        gap: 1vw;
+      }
+
+      .media h5 {
+        font-size: clamp(0.75rem, 1.2vw, 1rem);
+        letter-spacing: 2px;
+      }
+    }
+
+    /* Desktop (1024px and up) */
+    @media (min-width: 1024px) {
+      .footer {
+        height: auto;
+        min-height: 60vh;
+        padding: 1vw;
+      }
+
+      .media {
+        gap: 0.8vw;
+        margin-top: 2.5vw;
+      }
+
+      .link {
+        gap: 0.6vw;
+      }
+
+      .link svg {
+        width: 40px;
+        height: 40px;
+      }
+
+      .media h5 {
+        letter-spacing: 2px;
+        font-size: 1rem;
+      }
+    }

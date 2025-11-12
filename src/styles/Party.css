@@ -1,0 +1,111 @@
+.p-container {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+
+    .p-container img {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .p-container h1 {
+      font-size: clamp(1.5rem, 6vw, 3.5rem);
+      text-align: center;
+    }
+
+    .p-container p {
+      width: 100%;
+      max-width: 700px;
+      margin-top: 0;
+      text-align: center;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    .p-btn {
+      display: flex;
+      gap: clamp(0.5rem, 2vw, 1.5rem);
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .p-btn button {
+      color: #000000;
+      background: transparent;
+      padding: clamp(0.6rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+      border: 3px solid rgb(0, 0, 0);
+      cursor: pointer;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      white-space: nowrap;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .p-btn button:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+
+    .p-btn button:active {
+      transform: scale(0.95);
+    }
+
+    /* Tablet (640px and up) */
+    @media (min-width: 640px) {
+      .p-container {
+        padding: 3rem 2rem;
+        gap: 2rem;
+      }
+
+      .p-container img {
+        width: 60%;
+        max-width: 500px;
+      }
+
+      .p-container p {
+        padding: 0;
+      }
+    }
+
+    /* Desktop (1024px and up) */
+    @media (min-width: 1024px) {
+      .p-container {
+        padding: 4rem 2rem;
+        gap: 2.5rem;
+      }
+
+      .p-container img {
+        width: 40vw;
+        max-width: 600px;
+      }
+
+      .p-container h1 {
+        font-size: 5vw;
+      }
+
+      .p-container p {
+        width: 80vw;
+      }
+
+      .p-btn {
+        gap: 1vw;
+        margin-top: 1.5vw;
+      }
+    }
+
+    /* Extra large screens (1440px and up) */
+    @media (min-width: 1440px) {
+      .p-container {
+        min-height: 100vh;
+      }
+    }

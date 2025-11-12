@@ -1,0 +1,229 @@
+.main-container-c {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-c {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5vw;
+    padding: 1.5vw;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Ensures image container doesn't collapse on very small screens */
+.left,
+.alt-right {
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.right,
+.alt-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8vw;
+    padding: 1vw;
+    min-height: 180px;
+    min-width: 0;
+    box-sizing: border-box;
+    /* Center children (h1, p) horizontally */
+    align-items: center;
+}
+
+.left {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.left img,
+.alt-right img,
+.right img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    max-height: 320px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.right {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.alt-left,
+.alt-right {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Default flex order for mobile: image first, text second */
+.container-c .left,
+.container-c .alt-right {
+    order: 1;
+}
+
+.container-c .right,
+.container-c .alt-left {
+    order: 2;
+}
+
+/* Headings and paragraphs styling */
+.assasin h1,
+.echo h1,
+.magician h1,
+.healer h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.assasin p,
+.echo p,
+.magician p,
+.healer p {
+    width: 80%;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    line-height: 1.6;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* Ensures same width as h1 */
+}
+
+/* Tablet (768px and up): layout shifts to row, fine-tune image */
+@media (min-width: 768px) {
+    .container-c {
+        flex-wrap: nowrap;
+        gap: 2vw;
+    }
+
+    .left,
+    .alt-right {
+        width: 28vw;
+        min-width: 200px;
+        max-width: 350px;
+        min-height: 22vw;
+        justify-content: flex-end;
+    }
+
+    .right,
+    .alt-left {
+        width: 62vw;
+        min-width: 0;
+        min-height: 22vw;
+        justify-content: flex-start;
+        /* Keep children centered horizontally */
+        align-items: center;
+        padding-left: 2vw;
+    }
+
+    .left img,
+    .alt-right img,
+    .right img {
+        width: 100%;
+        height: auto;
+        max-width: 320px;
+        max-height: 340px;
+        object-fit: contain;
+    }
+
+    .container-c .left,
+    .container-c .alt-right,
+    .container-c .right,
+    .container-c .alt-left {
+        order: initial;
+    }
+
+    .assasin h1,
+    .echo h1,
+    .magician h1,
+    .healer h1 {
+        font-size: 4vw;
+        text-align: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .assasin p,
+    .echo p,
+    .magician p,
+    .healer p {
+        width: 80%;
+        font-size: 1.3vw;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Large screens (1024px and up) */
+@media (min-width: 1024px) {
+    .container-c {
+        padding: 2vw;
+        gap: 2vw;
+    }
+
+    .left,
+    .alt-right {
+        width: 21vw;
+        max-width: 350px;
+        min-width: 210px;
+        min-height: 18vw;
+    }
+
+    .right,
+    .alt-left {
+        width: 68vw;
+        min-width: 0;
+        min-height: 18vw;
+        padding-left: 2vw;
+        align-items: center;
+    }
+
+    .left img,
+    .alt-right img,
+    .right img {
+        max-width: 340px;
+        max-height: 360px;
+    }
+
+    .assasin h1,
+    .echo h1,
+    .magician h1,
+    .healer h1 {
+        font-size: 3.5vw;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .assasin p,
+    .echo p,
+    .magician p,
+    .healer p {
+        width: 80%;
+        font-size: 1.25vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

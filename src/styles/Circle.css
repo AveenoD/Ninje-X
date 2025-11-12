@@ -1,0 +1,12 @@
+.ring{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    background: #914c4c;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    margin: -1vw 0 0 -1vw;
+    z-index: -111;
+    
+}

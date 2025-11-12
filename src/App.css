@@ -1,0 +1,34 @@
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background: url('/newbg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .app {
+    background-attachment: scroll;
+    min-height: auto;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .app {
+    background-attachment: scroll;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .app {
+    background-attachment: fixed;
+  }
+}
